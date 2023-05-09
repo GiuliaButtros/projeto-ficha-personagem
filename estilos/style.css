@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body, html{
+    height: 100vh;
+    width: 100vw;
+}
+
+main.grid-container{
+
+    height: 100vh;
+    width: 100vw;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px auto 50px;
+    column-gap: 5px;
+    row-gap: 5px;
+    align-items: center;
+
+}
+
+section.grid-item{
+    background-color: powderblue;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+
+}

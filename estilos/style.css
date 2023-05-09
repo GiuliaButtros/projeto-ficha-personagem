@@ -8,17 +8,21 @@
 body, html{
     height: 100vh;
     width: 100vw;
+
+    display: flex;
 }
 
 main.grid-container{
-    height: 100vh;
-    width: 100vw;
-    
+    height: 95vh;
+    width: 95vw;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
     grid-template-rows: 60px auto 300px;
     column-gap: 5px;
     row-gap: 5px;
+    /*grid-template-areas: "ficha imagem" "info imagem" "extra atributos";*/
 
 }
 
@@ -27,7 +31,28 @@ section.grid-item{
     height: 100%;
     width: 100%;
     margin: auto;
-    
-    
 
+    
+    
+    
 }
+
+/*.ficha{
+    grid-area: ficha;
+}
+
+.imagem{
+    grid-area: area;
+}
+
+.info{
+    grid-area: info;
+}
+
+.atributos{
+    grid-area: atributos;
+}
+
+.extra{
+    grid-area: extra;
+}*/

@@ -4,6 +4,8 @@
 
 ## Ferramentas: HTML5 | CSS3 | JavaScript
 
+# DEPLOY: https://giuliabuttros.github.io/projeto-ficha-personagem/
+
 [X] Busca de referências de fichas reais
 [X] Estruturação do HTML
 [X] Criação da área 'ficha'

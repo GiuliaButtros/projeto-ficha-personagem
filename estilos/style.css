@@ -3,6 +3,7 @@
 *{
     padding: 0px;
     margin: 0px;
+    
 }
 
 body, html{
@@ -16,33 +17,37 @@ main.grid-container{
     height: 95vh;
     width: 95vw;
     margin: auto;
+    
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    grid-template-rows: 60px auto 300px;
-    column-gap: 5px;
-    row-gap: 5px;
-    /*grid-template-areas: "ficha imagem" "info imagem" "extra atributos";*/
+    grid-template-rows: 60px auto 300px;*/
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 
+                        2fr 
+                        1fr;
+    grid-gap: 5px;
+    grid-template-areas: "ficha imagem" "info imagem" "extra atributos";
 
 }
 
 section.grid-item{
     background-color: powderblue;
-    height: 100%;
+    /*height: 100%;
     width: 100%;
-    margin: auto;
+    margin: auto;*/
 
     
     
     
 }
 
-/*.ficha{
+.ficha{
     grid-area: ficha;
 }
 
 .imagem{
-    grid-area: area;
+    grid-area: imagem;
 }
 
 .info{
@@ -55,4 +60,4 @@ section.grid-item{
 
 .extra{
     grid-area: extra;
-}*/
+}

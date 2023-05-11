@@ -11,10 +11,14 @@
     <main class="grid-container">
         <section class="ficha">
             <h1>Ficha de Personagem</h1>
-            <form action="ficha.php" method="get">   
+            <form action="ficha.php" method="get"> 
+                <div>
+                    <label for="ijogador">Jogador:</label>
+                    <input type="text" name="jogador" id="ijogador" required placeholder="Nome do jogador">
+                </div>  
                 <div>
                     <label for="inome">Nome:</label>
-                    <input type="text" name="nome" id="inome" required>
+                    <input type="text" name="nome" id="inome" required placeholder="Nome do personagem">
                 </div>
                     <!-- VER MAIS ATRIBUTOS NO INPUT PARA COLOCAR -->
                 <div>
@@ -35,16 +39,8 @@
 
                         <option value="" selected disabled>---Escolha---</option>
                         <option value="guerreiro">Guerreiro</option>
-                        <option value="arqueiro">Arqueiro</option>
                         <option value="mago">Mago</option>
-                        <option value="ladino">Ladino</option>
-                        <option value="curandeiro">Curandeiro</option>
-                        <option value="paladino">Paladino</option>
-                        <option value="necromante">Necromante</option>
-                        <option value="druida">Druida</option>
-                        <option value="monge">Monge</option>
-                        <option value="bardo">Bardo</option>
-                        <option value="barbaro">Bárbaro</option>                     
+                        <option value="ladino">Ladino</option>                    
 
                     </select> <br>
 
@@ -54,38 +50,77 @@
                     <option value="humano">Humano</option>
                     <option value="elfo">Elfo</option>
                     <option value="anao">Anão</option>
-                    <option value="draconato">Draconato</option>
-                    <option value="tiefling">Tiefling</option>
+                    <option value="hobbit">Hobbit</option>
                 </select> <br>
 
-                <label for="iidade">Idade</label>
+                <label for="iidade">Idade:</label>
                 <input type="number" name="idade" id="idade" min="0" > <!-- Coloco máximo de idade? E se for um Elfo ancião? --> <br>
 
-                <label for="iorigem">Origem</label>
+                <label for="iorigem">Origem:</label>
                 <input type="text" name="origem" id="iorigem"> <br> <!-- Deixo br ou uso div? -->
 
-                <label for="iocup">Ocupação</label>
-                <input type="text" name="ocup" id="iocup" required> <br>
-
-                
-
-                <label for=""></label>
-
-                <label for=""></label>
-
-                <label for=""></label>
-
-                
-
-
+                <label for="iocup">Ocupação:</label>
+                <input type="text" name="ocup" id="iocup" required>                
 
             </form>
         </section>
 
-        <section class="atributos">Atributos</section>
-        <div class="espaco"></div>
+        <section class="atributos">
+            <p>Você tem 10 pontos para disrtibuir. Cada atributo pode receber até 5 pontos.</p>
+            <div>
+                <h2>Atributos</h2>
+                <form action="atributos.php">
+                    <label for="iforca">Força:</label> <br>
+                    <!-- INPUT -->
+                    <label for="iagilidade">Agilidade:</label> <br>
+                    <!-- INPUT -->
+                    <label for="iinteligencia">Inteligência:</label>
+                    <!-- INPUT -->
+
+
+
+                    <!--
+                        Anão: +1 força ; -1 agilidade, 
+                        Elfo: +1 inteligência ; -1 força, 
+                        Hobbit: +1 agilidade ; -1 força, 
+                        Humano: Sem bonus nem penalidades
+                    -->
+
+                </form>
+            </div>
+
+            <div>
+                <h2>Armas e acessórios</h2>
+                <div>
+                    
+                </div>
+            </div>
+
+            <div>
+                <h2>Estatísticas</h2>
+                <form action="stats.php">
+                    <label for="idano">Dano:</label> <br>
+                    <!-- OUTPUT -->
+
+                    <label for="idefesa">Defesa:</label> <br>
+                    <!-- OUTPUT -->
+                    
+                    <label for="imagia">Magia:</label>
+                    <!-- OUTPUT -->
+
+                    <!--
+                        Dano: força - bonus arma
+                        Defesa: agilidade + bonus armadura
+                        Magia: inteligência + bonus acessório
+                    -->
+                </form>
+            </div>
+
+
+        </section>
+        
         <section class="extra">Algum gráfico sei lá</section>
-        <!--<section class="grid-item" class="x">???</section>-->
+        
 
     </main>
     

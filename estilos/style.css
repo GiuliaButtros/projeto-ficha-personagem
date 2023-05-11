@@ -12,7 +12,7 @@ body, html{
     box-sizing: border-box;
     height: 100%;
 
-    /*display: flex;*/
+    
 } 
 
 main.grid-container{
@@ -47,6 +47,15 @@ select{
     height: 20px;
 }
 
+h2{
+    padding-bottom: 10px;
+}
+
+p{
+    padding: 5px;
+    padding-bottom: 15px;
+}
+
 section.info > form {
     height: 100%;
 
@@ -72,13 +81,8 @@ section > form > div > input.input-nivel{
     font-size: 1em;
 }
 
-section.info > form > div{
-    #
-}
-
 section.atributos > div {
-    
-    
+   
     
 }
 
@@ -115,6 +119,10 @@ section.atributos > div> form > div{
     grid-area: atributos;
     margin-right: 10px;
     margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     
 }

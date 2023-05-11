@@ -14,12 +14,13 @@
 [X] Criação da área 'atributos'
 [X] Criação da área 'extra'
 [X] Estruturação e posicionamento do GRID
-[] Conteúdo das áreas
-    [] 'ficha': Título e input do nome do personagem
-    [] 'imagem': Representação visual do personagem
-    [] 'informações': input/escolha de informações do personagem (idade, altura, ocupação, espécie, etc)
-    [] 'atributos': Distribuição de skills
+[X] Conteúdo das áreas
+    [X] 'ficha': Título e input do nome do personagem
+    [X] 'imagem': Representação visual do personagem
+    [X] 'informações': input/escolha de informações do personagem (idade, altura, ocupação, espécie, etc)
+    [X] 'atributos': Distribuição de skills
     [] 'extra': Gráficos correspondendo à distribuição de skills
-[] Estilização
+[] Estilização básica
+[] JavaScript
 [] Finalização
 

@@ -10,7 +10,7 @@
 <body>
     <main class="grid-container">
         <section class="ficha">
-            <h1>Ficha de Personagem</h1>
+            <!-- <h1>Ficha de Personagem</h1> -->
             <form action="ficha.php" method="get"> 
                 <div>
                     <label for="ijogador">Jogador:</label>
@@ -18,12 +18,12 @@
                 </div>  
                 <div>
                     <label for="inome">Nome:</label>
-                    <input type="text" name="nome" id="inome" required placeholder="Nome do personagem">
+                    <input type="text" name="nome" id="inome" required placeholder="Nome do personagem"  class="input-nome">
                 </div>
                     <!-- VER MAIS ATRIBUTOS NO INPUT PARA COLOCAR -->
                 <div>
-                    <label for="inivel">Nível</label>
-                    <input type="number" name="nivel" id="inivel" required min="0" max="100">
+                    <label for="inivel">Nível:</label>
+                    <input type="number" name="nivel" id="inivel" required min="0" max="100" class="input-nivel">
                 </div>
 
             </form>
@@ -37,33 +37,41 @@
         <section class="info">
             <form action="info.php" method="get">
 
-                <label for="iclasse">Classe</label>
+                <div>
+                    <label for="iclasse">Classe:</label>
                     <select name="classe" id="iclasse"> <!-- required? -->
+                            <option value="" selected disabled>---Escolha---</option>
+                            <option value="guerreiro">Guerreiro</option>
+                            <option value="mago">Mago</option>
+                            <option value="ladino">Ladino</option>
+                    </select>
+                </div>
 
+                <div>
+                    <label for="iraca">Raça:</label>
+                    <select name="raca" id="iraca" required>
                         <option value="" selected disabled>---Escolha---</option>
-                        <option value="guerreiro">Guerreiro</option>
-                        <option value="mago">Mago</option>
-                        <option value="ladino">Ladino</option>                    
+                        <option value="humano">Humano</option>
+                        <option value="elfo">Elfo</option>
+                        <option value="anao">Anão</option>
+                        <option value="hobbit">Hobbit</option>
+                    </select>
+                </div>
 
-                    </select> <br>
+                <div>
+                    <label for="iidade">Idade:</label>
+                    <input type="number" name="idade" id="idade" min="0" >
+                </div> <!-- Coloco máximo de idade? E se for um Elfo ancião? --> 
 
-                <label for="iraca">Raça</label>
-                <select name="raca" id="iraca" required>
-                    <option value="" selected disabled>---Escolha---</option>
-                    <option value="humano">Humano</option>
-                    <option value="elfo">Elfo</option>
-                    <option value="anao">Anão</option>
-                    <option value="hobbit">Hobbit</option>
-                </select> <br>
+                <div>
+                    <label for="iorigem">Origem:</label>
+                    <input type="text" name="origem" id="iorigem">
+                </div> <!-- Deixo br ou uso div? -->
 
-                <label for="iidade">Idade:</label>
-                <input type="number" name="idade" id="idade" min="0" > <!-- Coloco máximo de idade? E se for um Elfo ancião? --> <br>
-
-                <label for="iorigem">Origem:</label>
-                <input type="text" name="origem" id="iorigem"> <br> <!-- Deixo br ou uso div? -->
-
-                <label for="iocup">Ocupação:</label>
-                <input type="text" name="ocup" id="iocup" required>                
+                <div>
+                    <label for="iocup">Ocupação:</label>
+                    <input type="text" name="ocup" id="iocup" required>
+                </div>                
 
             </form>
         </section>
@@ -73,14 +81,20 @@
             <div>
                 <h2>Atributos</h2>
                 <form action="atributos.php">
-                    <label for="iforca">Força:</label> <br>
-                    <!-- INPUT -->
-                    <label for="iagilidade">Agilidade:</label> <br>
-                    <!-- INPUT -->
-                    <label for="iinteligencia">Inteligência:</label>
-                    <!-- INPUT -->
+                    <div>
+                        <label for="iforca">Força:</label>
+                        <!-- INPUT -->
+                    </div>
 
+                    <div>
+                        <label for="iagilidade">Agilidade:</label>
+                        <!-- INPUT -->
+                    </div>
 
+                    <div>
+                        <label for="iinteligencia">Inteligência:</label>
+                        <!-- INPUT -->
+                    </div>
 
                     <!--
                         Anão: +1 força ; -1 agilidade, 
@@ -102,14 +116,20 @@
             <div>
                 <h2>Estatísticas</h2>
                 <form action="stats.php">
-                    <label for="idano">Dano:</label> <br>
-                    <!-- OUTPUT -->
+                    <div>
+                        <label for="idano">Dano:</label> <br>
+                        <!-- OUTPUT -->
+                    </div>
 
-                    <label for="idefesa">Defesa:</label> <br>
-                    <!-- OUTPUT -->
+                    <div>
+                        <label for="idefesa">Defesa:</label> <br>
+                        <!-- OUTPUT -->
+                    </div>
                     
-                    <label for="imagia">Magia:</label>
-                    <!-- OUTPUT -->
+                    <div>
+                        <label for="imagia">Magia:</label>
+                        <!-- OUTPUT -->
+                    </div>
 
                     <!--
                         Dano: força - bonus arma

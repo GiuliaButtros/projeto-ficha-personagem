@@ -11,11 +11,45 @@
     <main class="grid-container">
         <section class="ficha">
             <h1>Ficha de Personagem</h1>
-            input
+            <form action="ficha.php" method="get">   
+                <div>
+                    <label for="inome">Nome:</label>
+                    <input type="text" name="nome" id="inome" required>
+                </div>
+                    <!-- VER MAIS ATRIBUTOS NO INPUT PARA COLOCAR -->
+                <div>
+                    <label for="inivel">Nível</label>
+                    <input type="number" name="nivel" id="inivel" required min="0" max="100">
+                </div>
+            </form>
         </section>
 
         <section class="imagem">Imagem</section>
-        <section class="info">Informações</section>
+
+        <section class="info">
+            <form action="info.php" method="get">
+
+                <label for="iocup">Ocupação</label>
+                <input type="text" name="ocup" id="iocup" required>
+
+                <label for="iidade">Idade</label>
+                <input type="number" name="idade" id="idade" required min="0" > <!-- Coloco máximo de idade? E se for um Elfo ancião? -->
+
+                <label for=""></label>
+
+                <label for=""></label>
+
+                <label for=""></label>
+
+                <label for=""></label>
+
+                
+
+
+
+            </form>
+        </section>
+
         <section class="atributos">Atributos</section>
         <div class="espaco"></div>
         <section class="extra">Algum gráfico sei lá</section>

@@ -2,8 +2,7 @@
 
 *{
     padding: 0px;
-    margin: 0px;
-        
+    margin: 0px;   
 }
 
 body, html{
@@ -12,7 +11,6 @@ body, html{
     box-sizing: border-box;
     height: 100%;
 
-    
 } 
 
 main.grid-container{
@@ -123,8 +121,7 @@ section.atributos > div> form > div{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    
+ 
 }
 
 .extra{

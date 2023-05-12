@@ -79,33 +79,74 @@
 
         <section class="atributos">
             <p>Você tem 10 pontos para disrtibuir. Cada atributo pode receber até 5 pontos.</p>
-            <div>
-                <h2>Atributos</h2>
-                <form action="atributos.php">
-                    <div>
-                        <label for="iforca">Força:</label>
-                        <!-- INPUT -->
+            <article class="container">
+                <div class="att-box">
+                    <h2>Atributos</h2>
+                    <div class="att-board">
+                        <p>Força</p>
+                        <div class="att-innerboard">
+                            <div class="attPip" id="forcP5"></div>
+                            <div class="attPip" id="forcP4"></div>
+                            <div class="attPip" id="forcP3"></div>
+                            <div class="attPip" id="forcP2"></div>
+                            <div class="attPip" id="forcP1"></div>
+                        </div>
                     </div>
 
-                    <div>
-                        <label for="iagilidade">Agilidade:</label>
-                        <!-- INPUT -->
+                    <div class="att-board">
+                        <p>Agilidade</p>
+                        <div class="att-innerboard">
+                            <div class="attPip" id="agilP5"></div>
+                            <div class="attPip" id="agilP4"></div>
+                            <div class="attPip" id="agilP3"></div>
+                            <div class="attPip" id="agilP2"></div>
+                            <div class="attPip" id="agilP1"></div>
+                        </div>
                     </div>
 
-                    <div>
-                        <label for="iinteligencia">Inteligência:</label>
-                        <!-- INPUT -->
+                    <div class="att-board">
+                        <p>Inteligência</p>
+                        <div class="att-innerboard">
+                            <div class="attPip" id="inteliP5"></div>
+                            <div class="attPip" id="inteliP4"></div>
+                            <div class="attPip" id="inteliP3"></div>
+                            <div class="attPip" id="inteliP2"></div>
+                            <div class="attPip" id="inteliP1"></div>
+                        </div>
+                    </div> 
+                    
+                    <h3>Pontos disponíveis</h3>
+                    <div class="point-board">
+                        <div class="point-innerboard">
+                            <div class="pointPip" id="pointP1"></div>
+                            <div class="pointPip" id="pointP2"></div>
+                            <div class="pointPip" id="pointP3"></div>
+                            <div class="pointPip" id="pointP4"></div>
+                            <div class="pointPip" id="pointP5"></div>
+                            <div class="pointPip" id="pointP6"></div>
+                            <div class="pointPip" id="pointP7"></div>
+                            <div class="pointPip" id="pointP8"></div>
+                            <div class="pointPip" id="pointP9"></div>
+                            <div class="pointPip" id="pointP10"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button-board">
+                    
+
+                    <div class="button" onclick="changeValue('forc',1)">
+                        <p>+</p>
+
+                        <!-- Usa uma propriedade do HTML para chamar uma função do JS quando div é clicado, passando como parâmetros a string "forc" e o int 1 (porque vai tentar somar 1 ponto)-->
                     </div>
 
-                    <!--
-                        Anão: +1 força ; -1 agilidade, 
-                        Elfo: +1 inteligência ; -1 força, 
-                        Hobbit: +1 agilidade ; -1 força, 
-                        Humano: Sem bonus nem penalidades
-                    -->
+                    <div class="button" onclick="changeValue()"></div>
 
-                </form>
-            </div>
+
+                </div>
+
+            </article>
 
             <div>
                 <h2>Armas e acessórios</h2>

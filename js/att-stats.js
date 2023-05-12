@@ -46,7 +46,12 @@ function updatePips(){
 
 function resetPips(){
     /* 
+    i = índice inicial ; condição ; oq acontece no final de cada iteração
+
     Mesma lógica dos loops acima, mas usa maxAttribute para enviar sempre os Ids de todos os pips do atributo
+
+    forcP etc são os is das divs no HTML
+
     */
 
     for(i = 0; i < maxAttribute; i++){
@@ -76,7 +81,7 @@ Recebe como parâmetros uma string com o código do atributo e um int com o valo
 
 function changeValue(att, value){
     /*
-    Conferir se está tentando adicionar um ponto em um atributo tendo pontos para gastar OU remover um ponto de um atributo tendo espaço em pointsToSpend (nesse caso, esse segundo check é desnecessário porque nunca terá pontos em atributos com o pointsToSpend cheio)
+     IF antes do SWITCH > Conferir se está tentando adicionar um ponto em um atributo tendo pontos para gastar OU remover um ponto de um atributo tendo espaço em pointsToSpend (nesse caso, esse segundo check é desnecessário porque nunca terá pontos em atributos com o pointsToSpend cheio)
     */
 
     if((value > 0 && pointsToSpend > 0) || (value < 0 && pointsToSpend < maxPoints)){ // && = AND lógico / || = or 
@@ -92,20 +97,47 @@ function changeValue(att, value){
                     /* Se estiver tentando adicionar um ponto (value = 1) e o máximo não tiver sido atingido */
                     forcValue++;
                     pointsToSpend--;
-                    }
-                
+                }
                 break
 
             case "agil":
                 if (agilValue > 0 && value < 0){
                     agilValue--;
                     pointsToSpend++;
-                }else if (agilValue)
+                }else if (agilValue < maxAttribute && value > 0){
+                    agilValue++;
+                    pointsToSpend--;
+                }
+                break
+            
+            case "inteli":
+                if (inteliValue > 0 && value < 0) {
+                    inteliValue--;
+                    pointsToSpend++;
+                }else if (inteliValue < maxAttribute && value > 0) {
+                    inteliValue++;
+                    pointsToSpend--;
+                }
+                break
 
-
-
-
+            default: 
+                console.log("changeValue switch error"); /* se o string att recebido não for um dos cases, deu algo errado */
+        
         }
     }
+    updatePips(); /* Atualiza pips no dinal da mudança das variáveis */
 }
+
+// Acende o pip referente ao id recebido como parâmetro (string) >
+
+function turnOn (id){
+    document.getElementById(id).style.backgroundColor = "cyan";
+}
+
+// Apaga pip referente ao id recebido como parâmetro (string) >
+
+function turnOff(id){
+    document.getElementById(id).style.backgroundColor = "rgb(19, 19, 102)";
+}
+
 

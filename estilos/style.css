@@ -45,9 +45,10 @@ select{
     height: 20px;
 }
 
-h2{
+h2, h3{
     padding-bottom: 10px;
 }
+
 
 p{
     padding: 5px;
@@ -79,17 +80,35 @@ section > form > div > input.input-nivel{
     font-size: 1em;
 }
 
-section.atributos > div {
-   
-    
+section.atributos > h3 {
+    text-align: center;
 }
 
-section.atributos > div> form > div{
+section.atributos > article.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;    
+}
+
+section.atributos > article.container > div.att-box{
+    background-color: aquamarine;
+}
+
+section.atributos > article.container > div.button-board{
+    background-color: cadetblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+/*section.atributos > div> form > div{
     background-color: aquamarine;
     margin-bottom: 2px;
     padding: 5px;
     font-size: 1.2em;   
-}
+}*/
 
 
 .ficha{    
@@ -120,11 +139,11 @@ section.atributos > div> form > div{
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
  
 }
 
-.extra{
+.stats{
     /*background-color: yellowgreen;*/
    grid-area: extra;
    margin-left: 10px;

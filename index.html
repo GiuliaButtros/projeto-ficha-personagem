@@ -78,10 +78,14 @@
         </section>
 
         <section class="atributos">
+            <h2>Atributos</h2>
             <p>Você tem 10 pontos para disrtibuir. Cada atributo pode receber até 5 pontos.</p>
+
+            <h3>Pontos disponíveis</h3>
+
             <article class="container">
+                
                 <div class="att-box">
-                    <h2>Atributos</h2>
                     <div class="att-board">
                         <p>Força</p>
                         <div class="att-innerboard">
@@ -115,7 +119,6 @@
                         </div>
                     </div> 
                     
-                    <h3>Pontos disponíveis</h3>
                     <div class="point-board">
                         <div class="point-innerboard">
                             <div class="pointPip" id="pointP1"></div>
@@ -133,7 +136,6 @@
                 </div>
 
                 <div class="button-board">
-                    
 
                     <div class="button" onclick="changeValue('forc',1)">
                         <p>+</p>
@@ -146,10 +148,30 @@
                         <!-- Chama a mesma função com a mesma string mas com o int -1 (vai tentar tirar 1 ponto)-->
                     </div>
 
+                    <div class="button" onclick="changeValue('agil',1)">
+                        <p>+</p>
+
+                    </div>
+
+                    <div class="button" onclick="changeValue('agil', -1)">
+                        <p>-</p>
+
+                    </div>
+
+                    <div class="button" onclick="changeValue('inteli',1)">
+                        <p>+</p>
+
+                    </div>
+
+                    <div class="button" onclick="changeValue('inteli', -1)">
+                        <p>-</p>
+
+                    </div>
                 </div>
-
             </article>
-
+        </section>
+        
+        <section class="stats">
             <div>
                 <h2>Armas e acessórios</h2>
                 <div>
@@ -159,7 +181,7 @@
 
             <div>
                 <h2>Estatísticas</h2>
-                <form action="stats.php">
+                <form action="stats.php"> <!-- TIRAR FORM -->
                     <div>
                         <label for="idano">Dano:</label> <br>
                         <!-- OUTPUT -->
@@ -182,11 +204,7 @@
                     -->
                 </form>
             </div>
-
-
         </section>
-        
-        <section class="extra">Algum gráfico sei lá</section>
 
         <!-- Adicionar múltipla escolha de qualidades e defeitos?? Sem influência nos pontos -->
         

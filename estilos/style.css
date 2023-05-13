@@ -102,6 +102,10 @@ section.atributos > article.container > div.button-board{
     grid-template-rows: 1fr 1fr 1fr;
 }
 
+section.atributos > article.container > div.button{
+    
+}
+
 
 /*section.atributos > div> form > div{
     background-color: aquamarine;

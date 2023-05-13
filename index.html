@@ -141,8 +141,10 @@
                         <!-- Usa uma propriedade do HTML para chamar uma função do JS quando div é clicado, passando como parâmetros a string "forc" e o int 1 (porque vai tentar somar 1 ponto)-->
                     </div>
 
-                    <div class="button" onclick="changeValue()"></div>
-
+                    <div class="button" onclick="changeValue('forc', -1)">
+                        <p>-</p>
+                        <!-- Chama a mesma função com a mesma string mas com o int -1 (vai tentar tirar 1 ponto)-->
+                    </div>
 
                 </div>
 

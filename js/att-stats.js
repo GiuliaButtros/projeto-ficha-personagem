@@ -14,7 +14,7 @@ function updatePips(){
     resetPips(); // Chama a função que apaga todos os pips, para depois acender os que precisam ser acesos
 
     for (i = 0; i < forcValue; i++) { // i++ = add 1 ao valor de i
-        turnOn("forP" + (i + 1));
+        turnOn("forcP" + (i + 1));
 
         /*
         Loop que roda uma vez para cada ponto colocado no atributo
@@ -37,7 +37,7 @@ function updatePips(){
         turnOn("inteliP" + (i + 1));
     }
 
-    for (1 = 0; i < pointsToSpend; i++){
+    for (i = 0; i < pointsToSpend; i++){
         turnOn("pointP" + (i + 1));
     }
 }
@@ -131,13 +131,13 @@ function changeValue(att, value){
 // Acende o pip referente ao id recebido como parâmetro (string) >
 
 function turnOn (id){
-    document.getElementById(id).style.backgroundColor = "cyan";
+    document.getElementById(id).style.backgroundColor = "rgb(255, 149, 0)";
 }
 
 // Apaga pip referente ao id recebido como parâmetro (string) >
 
 function turnOff(id){
-    document.getElementById(id).style.backgroundColor = "rgb(19, 19, 102)";
+    document.getElementById(id).style.backgroundColor = "rgb(163, 149, 129)";
 }
 
 

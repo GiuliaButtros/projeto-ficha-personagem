@@ -45,16 +45,6 @@ select{
     height: 20px;
 }
 
-h2, h3{
-    padding-bottom: 10px;
-}
-
-
-p{
-    padding: 5px;
-    padding-bottom: 15px;
-}
-
 section.info > form {
     height: 100%;
 
@@ -80,41 +70,80 @@ section > form > div > input.input-nivel{
     font-size: 1em;
 }
 
+section.atributos > h2{
+    padding-bottom: 15px;
+}
+
 section.atributos > h3 {
     text-align: center;
+    padding-bottom: 15px;
+}
+
+section.atributos > p{
+    padding: 10px 0px;
 }
 
 section.atributos > article.container {
-    height: 100%;
+    /*height: 100%;*/
+    border: 1px solid burlywood;
+    border-radius: 10px;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;    
+    justify-content: space-evenly; 
+     
+}
+
+section.atributos > div.point-board{
+    margin: 0px auto 15px auto;
+    height: 30px;
+    width: 70%;
+    border: 1px solid burlywood;
+    border-radius: 5px;
 }
 
 section.atributos > article.container > div.att-box{
-    border: 1px solid burlywood;
-    width: 80%;
-    border-radius: 10px 0px 0px 10px;
-
-    
+    width: 55%;
 }
 
 section.atributos > article.container > div.att-box > div.att-board{
+    height: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
+}
 
+section.atributos > article.container > div.att-box > div.att-board > div.att-innerboard{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
 
+.attPip{
+    background-color: rgb(163, 149, 129);
+    height: 15px;
+    width: 5px;
+    border-radius: 5px; 
 }
 
 section.atributos > article.container > div.button-board{
-    background-color: cadetblue;
+    height: 100%;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
 }
 
-section.atributos > article.container > div.button{
-
+section.atributos > article.container > div.button-board > div.button p{
+    height: 15px;
+    width: 15px;
+    background-color: burlywood;
+    text-align: center;
+    border-radius: 50%;
+   
 }
+
 
 
 /*section.atributos > div> form > div{

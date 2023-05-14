@@ -92,7 +92,17 @@ section.atributos > article.container {
 }
 
 section.atributos > article.container > div.att-box{
-    background-color: aquamarine;
+    border: 1px solid burlywood;
+    width: 80%;
+    border-radius: 10px 0px 0px 10px;
+
+    
+}
+
+section.atributos > article.container > div.att-box > div.att-board{
+    
+
+
 }
 
 section.atributos > article.container > div.button-board{
@@ -103,7 +113,7 @@ section.atributos > article.container > div.button-board{
 }
 
 section.atributos > article.container > div.button{
-    
+
 }
 
 

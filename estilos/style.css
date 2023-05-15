@@ -13,6 +13,10 @@ body, html{
     height: 100%;
 } 
 
+h2{
+    font-size: 1.3em;
+}
+
 main.grid-container{
     margin: auto;
     height: 100%;

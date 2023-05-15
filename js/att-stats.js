@@ -33,7 +33,7 @@ function updateRacaEClasse () {
             bonusRacaForc = 0;
             bonusRacaAgil = 0;
             bonusRacaInteli = 0;
-            // Talvez seja outra funcao em vez de innerText
+            //inner.Text ok
             document.getElementById("textoRaca").innerText = "Humano: Sem bonus";
             break;
         case "Elfo":
@@ -97,7 +97,7 @@ function updateRacaEClasse () {
     document.getElementById("textoArma").innerText = arma;
     document.getElementById("textoEquip").innerText = equipamento;
 
-    // Troca a figura. Pode ter que mexer no começo da url
+    // Troca a figura. A figura é background na div
     document.getElementById("figura").style.backgroundImage="url(./imagens/" + raca + "_" + classe + ".PNG)";
     
     updateEstatisticas();   

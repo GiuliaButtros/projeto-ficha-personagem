@@ -2,7 +2,8 @@
 
 *{
     padding: 0px;
-    margin: 0px;   
+    margin: 0px; 
+    font-family: Georgia, 'Times New Roman', Times, serif;  
 }
 
 body, html{
@@ -13,8 +14,9 @@ body, html{
 } 
 
 main.grid-container{
+    margin: auto;
     height: 100%;
-    width: 100%;
+    width: 460px;    
         
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -31,10 +33,6 @@ section.ficha > form{
     display: flex;
     flex-direction: column;
     gap: 3px;
-}
-
-section.imagem{
-    
 }
 
 section.imagem > div#figura {
@@ -77,10 +75,11 @@ section > form > div {
     /*margin-bottom: 2px;*/
     padding: 5px;
     font-size: 1em;
+    font-weight: bold;
 }
 
 section > form > div > input.input-nome{ 
-    width: 75%;
+    width: 70%;
     font-size: 1em;
 }
 
@@ -94,8 +93,11 @@ section.atributos > h2{
 }
 
 section.atributos > p{
-    padding: 10px 0px 40px 0px;
+    padding: 10px 0px 20px 0px;
     
+}
+section.atributos > p.bonusTexto{
+    font-weight: bold;
 }
 
 section.atributos > h3 {
@@ -200,21 +202,27 @@ section.stats > h2{
 section.stats > div.armas{
     border: 1px solid burlywood;
     border-radius: 10px;
-    height: 50px;
+    height: 30px;
+    padding: 5px;
 }
 
 section.stats> div.stats-group{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    
+}
+
+section.stats> div.stats-group p{
+    display: inline-block;
+    font-weight: bold;
 }
 
 .dano, .defesa, .magia{
     height: 25px;
     border: 1px solid burlywood;
     border-radius: 10px;
-    padding: 5px;
-
+    padding: 5px; 
 }
 
 

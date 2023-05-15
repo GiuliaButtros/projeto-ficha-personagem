@@ -1,5 +1,7 @@
 # PROJETO FICHA DE PERSONAGEM
 
+## no momento não responsivo - Tamanho da tela: 460px
+
 ## Projeto de criação de uma ficha de personagem de RPG, na qual o usuário poderá preencher informações e marcar opções de customização
 
 ## Ferramentas: HTML5 | CSS3 | JavaScript
@@ -19,8 +21,8 @@
     [X] 'imagem': Representação visual do personagem
     [X] 'informações': input/escolha de informações do personagem (idade, altura, ocupação, espécie, etc)
     [X] 'atributos': Distribuição de skills
-    [] 'extra': Gráficos correspondendo à distribuição de skills
-[] Estilização básica
-[] JavaScript
-[] Finalização
+    [X] 'stats': Estatísticas + equipamentos
+[X] Estilização básica
+[X] JavaScript
+[X] Finalização
 

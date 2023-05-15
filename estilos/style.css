@@ -150,12 +150,14 @@ section.atributos > article.container > div.att-box > div.att-board{
     justify-content: space-between;
     align-items: center;
     
+    
 }
 
 section.atributos > article.container > div.att-box > div.att-board > div.att-innerboard{
     display: flex;
     gap: 3px;
     align-items: center;
+    padding-left: 5px;
 }
 
 .attPip{

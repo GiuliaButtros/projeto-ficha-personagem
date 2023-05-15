@@ -43,7 +43,7 @@
                 <div>
                     <label for="classe-select">Classe:</label>
                     <select name="classe" id="classe-select" onchange="updateRacaEClasse()"> <!-- required? -->
-                            <option value="" disabled>---Escolha---</option>
+                            <option value="" disabled selected>---Escolha---</option>
                             <option value="guerreiro">Guerreiro</option>
                             <option value="mago">Mago</option>
                             <option value="ladino">Ladino</option>
@@ -53,7 +53,7 @@
                 <div>
                     <label for="raca-select">Raça:</label>
                     <select name="raca" id="raca-select" required onchange="updateRacaEClasse()">
-                        <option value="" disabled>---Escolha---</option>
+                        <option value="" disabled selected>---Escolha---</option>
                         <option value="humano">Humano</option>
                         <option value="elfo">Elfo</option>
                         <option value="anao">Anão</option>
@@ -181,8 +181,8 @@
         <section class="stats">
             <h2>Armas e equipamentos</h2>
             <div class="armas">
-                <p id="textoArma">A</p>
-                <p id="textoEquip">A</p>
+                <p id="textoArma"></p>
+                <p id="textoEquip"></p>
             </div>
 
             <h2>Estatísticas</h2>
@@ -190,19 +190,19 @@
                 
                 <div class="dano">
                     <p>Dano:</p>
-                    <p id="textoDano">A</p>
+                    <p id="textoDano"></p>
 
                 </div>
 
                 <div class="defesa">
                     <p>Defesa:</p>
-                    <p id="textoDefesa">A</p>
+                    <p id="textoDefesa"></p>
 
                 </div>
 
                 <div class="magia">
                     <p>Magia:</p>
-                    <p id="textoMagia">A</p>
+                    <p id="textoMagia"></p>
                     
                 </div>
 

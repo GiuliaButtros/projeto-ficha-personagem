@@ -1,15 +1,12 @@
 
 
-
-
 // Código que roda quando a página é carregada
 const maxAttribute = 5; // Valor máximo de cada atributo
 const maxPoints = 10; // Pontos totais a serem distribuídos
 let pointsToSpend = maxPoints; // Variável iniciada com o valor máximo
 let forcValue = agilValue = inteliValue = 0; // Uma variável para cada atributo, iniciadas em 0
-updatePips(); // Chama a função que atualiza o estado dos pips
-
-//----- ARMAS E STATS
+let raca = "";
+let classe = "";
 let arma = "";
 let equipamento = "";
 let dano = 0;
@@ -21,23 +18,7 @@ let bonusRacaInteli = 0;
 let bonusDanoArma = 0;
 let bonusDefesaEq = 0;
 let bonusMagiaEq = 0;
-let seletorRaca = document.getElementById("raca-select");
-let seletorClasse = document.getElementById("classe-select");
-let elementoFigura = document.getElementById("figura");
-
-// Texto em estatisticas que fala os bonus da raca
-let textoRaca = document.getElementById("textoRaca");
-
-// Textos em estaticas que falam a arma e o equipamento da classe
-let textoArma = document.getElementById("textoArma");
-let textoEquip = document.getElementById("textoEquip");
-
-// Texto em estatisticas que falam as 3 estatísticas finais
-let textoDano = document.getElementById("textoDano");
-let textoDefesa = document.getElementById("textoDefesa");
-let textoMagia = document.getElementById("textoMagia");
-// -----
-
+updatePips(); // Chama a função que atualiza o estado dos pips
 
 //Funções
 
@@ -48,57 +29,62 @@ function updateRacaEClasse () {
     // Usar no switch o texto do item selecionado em Raca  
     switch (document.getElementById("raca-select").options[document.getElementById("raca-select").selectedIndex].text) {
         case "Humano":
+            raca = "humano";
             bonusRacaForc = 0;
             bonusRacaAgil = 0;
-            bonusRacaInte = 0;
+            bonusRacaInteli = 0;
             // Talvez seja outra funcao em vez de innerText
-            textoRaca.innerHTML="Humano: Sem bonus";
+            document.getElementById("textoRaca").innerText = "Humano: Sem bonus";
             break;
         case "Elfo":
+            raca = "elfo";    
             bonusRacaForc = -1;
             bonusRacaAgil = 0;
-            bonusRacaInte = 1;
-            textoRaca.innerHTML = "Elfo: -1 em Força, +1 em Inteligência";
+            bonusRacaInteli = 1;
+            document.getElementById("textoRaca").innerHTML = "Elfo: -1 em Força, +1 em Inteligência";
             break;
-        case "Anao":
+        case "Anão":
+            raca = "anao";
             bonusRacaForc = 1;
             bonusRacaAgil = -1;
-            bonusRacaInte = 0;
-            textoRaca.innerHTML="Anão: +1 em Força, -1 em Agilidade";
+            bonusRacaInteli = 0;
+            document.getElementById("textoRaca").innerText = "Anão: +1 em Força, -1 em Agilidade";
             break;
         case "Hobbit":
+            raca = "hobbit";
             bonusRacaForc = -1;
             bonusRacaAgil = 1;
-            bonusRacaInte = 0;
-            textoRaca.innerHTML="Hobbit: -1 em Força, +1 em Agilidade";
+            bonusRacaInteli = 0;
+            document.getElementById("textoRaca").innerText = "Hobbit: -1 em Força, +1 em Agilidade";
             break;
         default:
             console.log("Erro no switch 1 em updateRacaEClasse");
             break;
     }
 
-    console.log(bonusRacaForc);
-
     // Usar no switch o texto do item selecionado em Classe
-    switch (seletorClasse.options[seletorRaca.selectedIndex].text) {
+    switch (document.getElementById("classe-select").options[document.getElementById("classe-select").selectedIndex].text) {
         case "Guerreiro":
-            arma = "Espada";
+            classe = "guerreiro";
+            arma = "Espada: Dano +2";
             bonusDanoArma = 2;
-            equipamento = "Armadura média";
+            equipamento = "Armadura média: Defesa +3";
             bonusDefesaEq = 3;
             bonusMagiaEq = 0;
             break;
         case "Ladino":
-            arma = "Adaga";
+            classe = "ladino";
+            arma = "Adaga: Dano +1";
             bonusDanoArma = 1;
-            equipamento = "Armadura leve";
+            equipamento = "Armadura leve: Defesa +1";
             bonusDefesaEq = 1;
             bonusMagiaEq = 0;
             break;
         case "Mago":
-            arma = "Cajado";
+            classe = "mago";
+            arma = "Cajado: Dano +2";
             bonusDanoArma = 1;
-            equipamento = "Anel mágico";
+            equipamento = "Anel mágico: Magia +1";
             bonusDefesaEq = 0;
             bonusMagiaEq = 1;
             break;
@@ -108,11 +94,11 @@ function updateRacaEClasse () {
     }
 
     // Troca o texto da arma e do equipamento
-    textoArma.innerText(arma);
-    textoEquip.innerText(equipamento);
+    document.getElementById("textoArma").innerText = arma;
+    document.getElementById("textoEquip").innerText = equipamento;
 
     // Troca a figura. Pode ter que mexer no começo da url
-    elementoFigura.style.backgroundImage="url(..imagens/" + raca + "_" + classe + ".PNG)";
+    document.getElementById("figura").style.backgroundImage="url(./imagens/" + raca + "_" + classe + ".PNG)";
     
     updateEstatisticas();   
 }
@@ -120,11 +106,11 @@ function updateRacaEClasse () {
 function updateEstatisticas() {   
     dano = forcValue + bonusRacaForc + bonusDanoArma;
     defesa = agilValue + bonusRacaAgil + bonusDefesaEq;
-    magia = inteliValue + bonusRacaInte + bonusMagiaEq;
+    magia = inteliValue + bonusRacaInteli + bonusMagiaEq;
 
-    textoDano.innerText(dano);
-    textoDefesa.innerText(defesa);
-    textoMagia.innerText(magia);
+    document.getElementById("textoDano").innerText = dano;
+    document.getElementById("textoDefesa").innerText = defesa;
+    document.getElementById("textoMagia").innerText = magia;
 }
 
 // - Atualiza os pips >
@@ -258,8 +244,6 @@ function turnOn (id){
 // Apaga pip referente ao id recebido como parâmetro (string) >
 
 function turnOff(id){
-    console.log(id);
+    //console.log(id);
     document.getElementById(id).style.backgroundColor = "rgb(163, 149, 129)";
 }
-
-

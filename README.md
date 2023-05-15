@@ -1,6 +1,8 @@
 # PROJETO FICHA DE PERSONAGEM
 
-## no momento não responsivo - Tamanho da tela: 460px
+### no momento não responsivo - Tamanho da tela: 460px
+
+### Quebra no Firefox
 
 ## Projeto de criação de uma ficha de personagem de RPG, na qual o usuário poderá preencher informações e marcar opções de customização
 

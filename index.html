@@ -31,7 +31,9 @@
         </section>
 
         <section class="imagem">
-            <label for="irep">Representação visual</label>
+            <div id="figura">
+
+            </div>
             
         </section>
 
@@ -39,9 +41,9 @@
             <form action="info.php" method="get">
 
                 <div>
-                    <label for="iclasse">Classe:</label>
-                    <select name="classe" id="iclasse"> <!-- required? -->
-                            <option value="" selected disabled>---Escolha---</option>
+                    <label for="classe-select">Classe:</label>
+                    <select name="classe" id="classe-select" onchange="updateRacaEClasse()"> <!-- required? -->
+                            <option value="" disabled>---Escolha---</option>
                             <option value="guerreiro">Guerreiro</option>
                             <option value="mago">Mago</option>
                             <option value="ladino">Ladino</option>
@@ -49,9 +51,9 @@
                 </div>
 
                 <div>
-                    <label for="iraca">Raça:</label>
-                    <select name="raca" id="iraca" required>
-                        <option value="" selected disabled>---Escolha---</option>
+                    <label for="raca-select">Raça:</label>
+                    <select name="raca" id="raca-select" required onchange="updateRacaEClasse()">
+                        <option value="" disabled>---Escolha---</option>
                         <option value="humano">Humano</option>
                         <option value="elfo">Elfo</option>
                         <option value="anao">Anão</option>
@@ -171,12 +173,16 @@
                     </div>
                 </div>
             </article>
+
+            <p>Bônus da raça:</p>
+            <p id="textoRaca"></p>
         </section>
         
         <section class="stats">
-            <h2>Armas e acessórios</h2>
+            <h2>Armas e equipamentos</h2>
             <div class="armas">
-                
+                <p id="textoArma">A</p>
+                <p id="textoEquip">A</p>
             </div>
 
             <h2>Estatísticas</h2>
@@ -184,16 +190,19 @@
                 
                 <div class="dano">
                     <p>Dano:</p>
+                    <p id="textoDano">A</p>
 
                 </div>
 
                 <div class="defesa">
                     <p>Defesa:</p>
+                    <p id="textoDefesa">A</p>
 
                 </div>
 
                 <div class="magia">
                     <p>Magia:</p>
+                    <p id="textoMagia">A</p>
                     
                 </div>
 

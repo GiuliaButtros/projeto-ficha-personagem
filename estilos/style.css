@@ -39,6 +39,10 @@ section.ficha > form{
     gap: 3px;
 }
 
+section.imagem > p{
+    text-align: center;
+}
+
 section.imagem > div#figura {
     width: 100%;
     height: 100%;

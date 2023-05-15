@@ -4,7 +4,7 @@
 
 ### Quebra no Firefox
 
-## Projeto de criação de uma ficha de personagem de RPG, na qual o usuário poderá preencher informações e marcar opções de customização
+## Projeto de criação de uma ficha de personagem de RPG, na qual o usuário poderá preencher informações e distribuir pontos de atributos.
 
 ## Ferramentas: HTML5 | CSS3 | JavaScript
 

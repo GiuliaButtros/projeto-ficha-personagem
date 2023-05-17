@@ -4,6 +4,7 @@
     padding: 0px;
     margin: 0px; 
     font-family: Georgia, 'Times New Roman', Times, serif;  
+    
 }
 
 body, html{
@@ -17,9 +18,12 @@ h2{
     font-size: 1.3em;
 }
 
+
 main.grid-container{
     margin: auto;
+    min-height: 650px;
     height: 100%;
+    max-height: 790px;
     width: 460px;    
         
     display: grid;
@@ -289,11 +293,12 @@ section.stats> div.stats-group p{
 }
 
 footer{
-    position: absolute;
+    position: fixed;
     text-align: center;
     width: 100%;
     background-color: rgb(163, 149, 129);
     padding: 3px 0px;
+    
 }
 
 footer p {

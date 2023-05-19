@@ -240,15 +240,6 @@ section.stats> div.stats-group p{
 }
 
 
-
-/*section.atributos > div> form > div{
-    background-color: aquamarine;
-    margin-bottom: 2px;
-    padding: 5px;
-    font-size: 1.2em;   
-}*/
-
-
 .ficha{    
    /*background-color: coral;*/
     grid-area: ficha;
